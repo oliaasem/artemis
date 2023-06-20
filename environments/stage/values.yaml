@@ -4,7 +4,7 @@ image:
   repository: us-central1-docker.pkg.dev/terraform-project-oliaasem/artemis/artemis
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "5.0.0"
+  tag: "2.0.0"
 
 ingress:
   enabled: true
@@ -16,11 +16,11 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: qa.oliaasem.com
+    - host: stage.oliaasem.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
-    - secretName: artemis-qa-tls
+    - secretName: artemis-stage-tls
       hosts:
-        - qa.oliaasem.com
+        - stage.oliaasem.com
