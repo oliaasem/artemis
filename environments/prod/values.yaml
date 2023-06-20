@@ -20,7 +20,7 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
+  tls: 
     - secretName: artemis-prod-tls
       hosts:
         - prod.oliaasem.com
